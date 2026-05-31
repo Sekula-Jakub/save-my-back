@@ -40,4 +40,10 @@ public class App extends Application {
         scene = new Scene(fxmlLoader.load(), 640, 480);
         mainStage.setScene(scene);
     }
+
+    protected static void loadFormView() throws IOException {
+        fxmlLoader = new FXMLLoader(App.class.getResource("form-view.fxml"));
+        scene = new Scene(fxmlLoader.load(), 640, 480);
+        mainStage.setScene(scene);
+    }
 }

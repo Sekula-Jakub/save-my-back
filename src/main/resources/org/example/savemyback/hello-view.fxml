@@ -16,7 +16,7 @@
             </Label>
             <Label prefHeight="56.0" prefWidth="298.0" text="It's Your first step to take care of your&#10;back while working on a computer! ">
                <font>
-                  <Font name="System Bold" size="16.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
             <ImageView fitHeight="196.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">

@@ -4,25 +4,25 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffe699;" stylesheets="@cssFiles/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffe699;" stylesheets="@cssFiles/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.savemyback.PrimaryController">
     <children>
         <VBox alignment="CENTER" prefHeight="310.0" prefWidth="600.0">
             <children>
                 <Label prefHeight="88.0" prefWidth="362.0" text="This aplication will automaticly send reminders&#10;to stand up and go for a short walk or do some&#10;simple excercises.">
                     <font>
-                        <Font name="System Bold" size="16.0" />
+                        <Font size="16.0" />
                     </font>
                 </Label>
             <Label prefHeight="58.0" prefWidth="362.0" text="You set the time periods and preferences&#10;for the excercises or walking activities.">
                <font>
-                  <Font name="System Bold" size="16.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
             </children>
         </VBox>
         <HBox alignment="CENTER" prefHeight="25.0" prefWidth="600.0">
             <children>
-                <Button fx:id="secondHelloButton" mnemonicParsing="false" prefHeight="29.0" prefWidth="95.0" styleClass="my-button" text="NEXT" textAlignment="CENTER">
+                <Button fx:id="secondHelloButton" mnemonicParsing="false" onAction="#handleSecondHelloButton" prefHeight="29.0" prefWidth="95.0" styleClass="my-button" text="NEXT" textAlignment="CENTER">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
