@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffe699;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.savemyback.PrimaryController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffe699;" stylesheets="@cssFiles/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.savemyback.FormViewController">
    <children>
       <HBox prefHeight="304.0" prefWidth="600.0">
          <children>
@@ -29,7 +29,7 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TextField prefHeight="25.0" prefWidth="208.0">
+                        <TextField fx:id="nameField" prefHeight="25.0" prefWidth="208.0">
                            <font>
                               <Font size="15.0" />
                            </font></TextField>
@@ -42,16 +42,16 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <ComboBox prefHeight="25.0" prefWidth="160.0">
+                        <ComboBox fx:id="timePeriodField" prefHeight="25.0" prefWidth="160.0">
                             <items>
                                 <FXCollections fx:factory="observableArrayList">
                                     <String fx:value="30 min" />
                                     <String fx:value="40 min" />
                                     <String fx:value="50 min" />
                                     <String fx:value="60 min" />
-                                    <String fx:value="1 hr 10 min" />
-                                    <String fx:value="1 hr 20 min" />
-                                    <String fx:value="1 hr 30 min" />
+                                    <String fx:value="70 min" />
+                                    <String fx:value="80 min" />
+                                    <String fx:value="90 min" />
                                 </FXCollections>
                             </items>
                         </ComboBox>
@@ -59,7 +59,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="445.0">
                      <children>
-                        <CheckBox mnemonicParsing="false" prefHeight="27.0" prefWidth="329.0" text="I have space to go for a short walk">
+                        <CheckBox fx:id="space4WalkField" mnemonicParsing="false" prefHeight="27.0" prefWidth="329.0" text="I have space to go for a short walk">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -71,7 +71,7 @@
          </children></HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#handleSubmitFormButton" text="SUBMIT" styleClass="my-button">
+            <Button fx:id="submitFormButton" mnemonicParsing="false" onAction="#handleSubmitFormButton" styleClass="my-button" text="SUBMIT">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

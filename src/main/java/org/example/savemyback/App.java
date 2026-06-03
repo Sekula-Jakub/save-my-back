@@ -22,7 +22,7 @@ public class App extends Application {
 
         if(UserDataSetter.checkFile()) {
             user = UserDataSetter.retrieveUserData();
-            //loadSomeView()
+            loadUserView(user);
         } else {
             loadFirstHelloView();
         }
@@ -31,6 +31,7 @@ public class App extends Application {
 
         stage.setTitle("Save My Back");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -49,6 +50,14 @@ public class App extends Application {
     protected static void loadFormView() throws IOException {
         fxmlLoader = new FXMLLoader(App.class.getResource("form-view.fxml"));
         scene = new Scene(fxmlLoader.load(), 640, 480);
+        mainStage.setScene(scene);
+    }
+
+    protected static void loadUserView(User user) throws IOException {
+        fxmlLoader = new FXMLLoader(App.class.getResource("userView.fxml"));
+        scene = new Scene(fxmlLoader.load(), 640, 480);
+        UserViewController userViewController = fxmlLoader.getController();
+        userViewController.loadUserData(user.getName(), user.getTimePeriod().getMinutes());
         mainStage.setScene(scene);
     }
 }
