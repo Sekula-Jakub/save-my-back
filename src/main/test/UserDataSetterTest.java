@@ -1,3 +1,4 @@
+import org.example.savemyback.TimePeriods;
 import org.example.savemyback.User;
 import org.example.savemyback.UserDataSetter;
 import org.junit.jupiter.api.AfterAll;
@@ -15,7 +16,7 @@ public class UserDataSetterTest {
     String dirName = "user_info.ser";
 
     @Test
-    public void testCheckFolder() {
+    public void testCheckFile() {
         Path newDir = Paths.get(dirName);
         try {
             Files.createFile(newDir);
@@ -26,7 +27,14 @@ public class UserDataSetterTest {
         Assertions.assertTrue(UserDataSetter.checkFile());
     }
 
+    @Test
+    public void testSaveAndRetrieveUserData() {
+        User savedUser = new User("Michal", TimePeriods.MINUTES30, true);
+        UserDataSetter.saveUserData(savedUser);
+        User retrievedUser = UserDataSetter.retrieveUserData();
 
+        Assertions.assertTrue(savedUser.equals(retrievedUser));
+    }
 
     @AfterEach
     public void cleanUp() {
