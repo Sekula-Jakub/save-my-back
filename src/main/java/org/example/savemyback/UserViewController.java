@@ -29,5 +29,11 @@ public class UserViewController {
         userNameLabel.setText(userName);
         String minutesAsString = Integer.toString(minutes);
         timePeriodLabel.setText(minutesAsString);
+
+        /*
+        TimeMeasurerThread thread = new TimeMeasurerThread(minutes);
+        thread.start();
+        thread.stopThread();
+        */
     }
 }
