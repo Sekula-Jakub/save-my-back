@@ -7,7 +7,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Objects;
 
 public class App extends Application {
 
@@ -15,16 +14,15 @@ public class App extends Application {
     private static FXMLLoader fxmlLoader;
     private static Stage mainStage;
 
-    private UserData user;
-
     @Override
     public void start(Stage stage) throws IOException {
 
         mainStage = stage;
+        User user;
 
-
-        if(SerializationChecker.checkFolder()) {
-            //fxmlLoader = new FXMLLoader(App.class.getResource("inny_view"));
+        if(UserDataSetter.checkFile()) {
+            user = UserDataSetter.retrieveUserData();
+            //loadSomeView()
         } else {
             loadFirstHelloView();
         }

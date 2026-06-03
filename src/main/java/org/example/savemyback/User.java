@@ -1,11 +1,11 @@
 package org.example.savemyback;
 
-public class UserData {
+public class User {
     private String name;
     private TimePeriods timePeriod;
     private boolean canWalk;
 
-    public UserData(String name, TimePeriods timePeriod, boolean canWalk) {
+    public User(String name, TimePeriods timePeriod, boolean canWalk) {
         this.name = name;
         this.timePeriod = timePeriod;
         this.canWalk = canWalk;

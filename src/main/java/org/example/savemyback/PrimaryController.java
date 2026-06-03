@@ -3,16 +3,9 @@ package org.example.savemyback;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-import javax.swing.*;
 import java.io.IOException;
 
 public class PrimaryController {
-
-    private App mainApp;
-
-    public void setApp(App mainApp) {
-        this.mainApp = mainApp;
-    }
 
     @FXML
     private void handleFirstButton(ActionEvent event) throws IOException {
@@ -29,5 +22,6 @@ public class PrimaryController {
     @FXML
     private void handleSubmitFormButton(ActionEvent event) throws IOException {
         System.out.println("Kliknieto submit.");
+
     }
 }
