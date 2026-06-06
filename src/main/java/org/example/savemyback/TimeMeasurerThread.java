@@ -1,29 +1,32 @@
 package org.example.savemyback;
 
-public class TimeMeasurerThread extends Thread {
-    int minutes;
-    long timeinMills;
+public class TimeMeasurerThread implements Runnable {
+    private Thread timeThrd;
+    private int minutes;
+    private long mileseconds;
 
-    public TimeMeasurerThread(int minutes) {
+    public TimeMeasurerThread(String name, int minutes) {
+        this.timeThrd = new Thread(this, name);
         this.minutes = minutes;
-        timeinMills = minutes * 60 * 1000;
-        this.setDaemon(true);
+        this.mileseconds = minutes * 60 * 1000;
+    }
+
+    public static TimeMeasurerThread createAndStart(int minutes) {
+        TimeMeasurerThread timeMeasurerThread = new TimeMeasurerThread("countingThread", minutes);
+        timeMeasurerThread.timeThrd.start();
+        return timeMeasurerThread;
+    }
+
+    public void interruptCountingThread() {
+        this.timeThrd.interrupt();
     }
 
     @Override
     public void run() {
-        System.out.println("Rozpoczeto watek");
         try {
-            Thread.sleep(timeinMills);
-            System.out.println("Czas minął!");
+            Thread.sleep(mileseconds);
         } catch (InterruptedException e) {
-            System.err.println(e.getMessage());
-            e.printStackTrace();
+            System.out.println("Przerwano watek " + timeThrd.getName());
         }
-    }
-
-    public void stopThread() {
-        this.interrupt();
-        System.out.println("Zakonczono watek.");
     }
 }

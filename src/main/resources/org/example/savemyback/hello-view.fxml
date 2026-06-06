@@ -5,30 +5,30 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffe699;" stylesheets="@cssFiles/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.savemyback.HelloViewController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="600.0" style="-fx-background-color: #ffe699;" stylesheets="@cssFiles/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.savemyback.HelloViewController">
    <children>
-      <VBox alignment="CENTER" prefHeight="331.0" prefWidth="600.0">
+      <VBox alignment="CENTER" prefHeight="388.0" prefWidth="600.0">
          <children>
-            <Label text="Hello!">
+            <Label prefHeight="86.0" prefWidth="93.0" text="Hello!">
                <font>
-                  <Font name="System Bold" size="37.0" />
+                  <Font name="Calibri Bold" size="37.0" />
                </font>
             </Label>
-            <Label prefHeight="56.0" prefWidth="298.0" text="It's Your first step to take care of your&#10;back while working on a computer! ">
+            <Label prefHeight="63.0" prefWidth="326.0" text="It's Your first step to take care of your&#10;back while working on a computer! ">
                <font>
-                  <Font size="16.0" />
+                  <Font name="Calibri" size="21.0" />
                </font>
             </Label>
-            <ImageView fitHeight="196.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="236.0" fitWidth="298.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assets/giraffe1.png" />
                </image>
             </ImageView>
          </children>
       </VBox>
-      <HBox alignment="CENTER" prefHeight="25.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="34.0" prefWidth="600.0">
          <children>
-            <Button fx:id="firstHelloButton" mnemonicParsing="false" onAction="#handleFirstButton" prefHeight="29.0" prefWidth="95.0" styleClass="my-button" text="NEXT" textAlignment="CENTER">
+            <Button fx:id="firstHelloButton" mnemonicParsing="false" onAction="#handleFirstButton" prefHeight="97.0" prefWidth="95.0" styleClass="my-button" text="NEXT" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

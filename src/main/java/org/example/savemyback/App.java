@@ -27,7 +27,7 @@ public class App extends Application {
             loadFirstHelloView();
         }
 
-        stage.getIcons().add(new Image(App.class.getResourceAsStream("assets/icon.png")));
+        stage.getIcons().add(new Image(App.class.getResourceAsStream("assets/icon2.png")));
 
         stage.setTitle("Save My Back");
         stage.setScene(scene);
