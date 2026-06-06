@@ -40,7 +40,7 @@
             </Label>
             <Label alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="44.0" text="min">
                <font>
-                  <Font name="Calibri Bold" size="22.0" />
+                  <Font name="Calibri Bold" size="25.0" />
                </font>
             </Label>
          </children>
