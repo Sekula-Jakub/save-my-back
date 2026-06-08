@@ -14,7 +14,3 @@
 
 
 ![Tekst alternatywny](src/main/resources/org/example/savemyback/readmeScreens/screen7.png)
-
-![Tekst alternatywny](src/main/resources/org/example/savemyback/readmeScreens/screen6.png)
-
-![Tekst alternatywny](src/main/resources/org/example/savemyback/readmeScreens/screen8.png)
