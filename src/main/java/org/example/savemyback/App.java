@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.application.Platform;
 
 import java.io.IOException;
 
@@ -32,6 +33,17 @@ public class App extends Application {
         stage.setTitle("Save My Back");
         stage.setScene(scene);
         stage.setResizable(false);
+
+        stage.setOnCloseRequest(windowEvent -> {
+            if (java.awt.SystemTray.isSupported()) {
+                java.awt.SystemTray tray = java.awt.SystemTray.getSystemTray();
+                for (java.awt.TrayIcon icon : tray.getTrayIcons()) {
+                    tray.remove(icon);
+                }
+            }
+            Platform.exit();
+        });
+
         stage.show();
     }
 

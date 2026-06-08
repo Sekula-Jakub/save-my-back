@@ -7,9 +7,9 @@
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffe699;" stylesheets="@cssFiles/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.savemyback.UserViewController">
    <children>
-      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="600.0">
          <children>
-            <Label prefHeight="68.0" prefWidth="130.0" text="Welcome">
+            <Label prefHeight="42.0" prefWidth="130.0" text="Welcome">
                <font>
                   <Font name="Calibri" size="30.0" />
                </font>
@@ -55,6 +55,11 @@
             <Font name="Calibri" size="25.0" />
          </font>
       </Label>
-      <Button fx:id="changeSettingsButton" mnemonicParsing="false" onAction="#handleChangeSettingsButton" prefHeight="31.0" prefWidth="216.0" styleClass="my-button" text="Change my settings" />
+      <Label fx:id="countingLabel" maxWidth="-Infinity" prefHeight="57.0">
+         <font>
+            <Font name="Calibri Bold" size="35.0" />
+         </font>
+      </Label>
+      <Button fx:id="changeSettingsButton" mnemonicParsing="false" onAction="#handleChangeSettingsButton" prefHeight="38.0" prefWidth="216.0" styleClass="my-button" text="Change my settings" />
    </children>
 </VBox>

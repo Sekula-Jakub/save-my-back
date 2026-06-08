@@ -16,6 +16,4 @@ public class HelloViewController {
         System.out.println("Kliknieto 1 przycisk.");
         App.loadSecondHelloView();
     }
-
-
 }
