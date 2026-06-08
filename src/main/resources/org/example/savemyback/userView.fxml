@@ -7,9 +7,9 @@
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="600.0" style="-fx-background-color: #ffe699;" stylesheets="@cssFiles/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.savemyback.UserViewController">
    <children>
-      <HBox alignment="CENTER" prefHeight="66.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="45.0" prefWidth="600.0">
          <children>
-            <Label prefHeight="80.0" prefWidth="130.0" text="Welcome">
+            <Label prefHeight="48.0" prefWidth="130.0" text="Welcome">
                <font>
                   <Font name="Calibri" size="30.0" />
                </font>
@@ -26,7 +26,7 @@
             </Label>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="48.0" prefWidth="600.0">
          <children>
             <Label text="Your preffered time period is: ">
                <font>

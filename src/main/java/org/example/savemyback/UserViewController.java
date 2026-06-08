@@ -49,13 +49,14 @@ public class UserViewController {
                     if(timeSeconds <= 0) {
                         stop();
                         countingLabel.setText("Time for a walk!");
-                        not.displayNotification("Czas na rozciąganie!", "Hej " + userName + ", wstań i zadbaj o swoje plecy!");
+                        not.displayNotification("Time for a quick reset!", "Hey " + userName + ", step away from the screen and stretch those legs!");
                         try {
                             App.loadTimeUpView(user);
                         } catch (IOException e) {
                             System.out.println(e.getMessage());
                             e.printStackTrace();
                         }
+                        App.showWindowOnTop();
                     }
                 }
             }
@@ -68,7 +69,7 @@ public class UserViewController {
         this.user = user;
         this.userName = user.getName();
         this.minutes = user.getTimePeriod().getMinutes();
-        //this.timeSeconds = this.minutes * 60 + 1;
+        this.timeSeconds = this.minutes * 60 + 1;
 
         userNameLabel.setText(userName);
         String minutesAsString = Integer.toString(minutes);

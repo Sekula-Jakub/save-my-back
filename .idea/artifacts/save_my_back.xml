@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="save-my-back">
+    <output-path>$PROJECT_DIR$/out/artifacts/save_my_back</output-path>
+    <root id="root">
+      <element id="archive" name="save_my_back.jar">
+        <element id="module-output" name="save-my-back" />
+      </element>
+    </root>
+  </artifact>
+</component>

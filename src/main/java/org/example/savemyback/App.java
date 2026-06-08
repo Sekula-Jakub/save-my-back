@@ -1,7 +1,6 @@
 package org.example.savemyback;
 
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -77,5 +76,14 @@ public class App extends Application {
         fxmlLoader = new FXMLLoader(App.class.getResource(source));
         scene = new Scene(fxmlLoader.load(), 640, 480);
         mainStage.setScene(scene);
+    }
+
+    public static void showWindowOnTop() {
+        if(mainStage.isIconified()) {
+            mainStage.setIconified(false);
+        }
+        mainStage.show();
+        mainStage.toFront();
+        mainStage.requestFocus();
     }
 }

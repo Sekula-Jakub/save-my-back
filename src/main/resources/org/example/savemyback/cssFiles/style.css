@@ -1,12 +1,104 @@
+
 .my-button {
     -fx-background-color: #799fe2;
     -fx-background-radius: 10;
     -fx-text-fill: white;
     -fx-font-weight: bold;
-    -fx-font-size: 18px;
+    -fx-font-size: 16px;
     -fx-padding: 10 20 10 20;
+    -fx-cursor: hand;
 }
 
 .my-button:hover {
     -fx-background-color: #5c84cc;
+}
+
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 4;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-border-color: #799fe2;
+    -fx-border-width: 2;
+}
+
+.combo-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 1;
+    -fx-font-size: 12px;
+}
+
+.combo-box:focused {
+    -fx-border-color: #799fe2;
+    -fx-border-width: 2;
+}
+
+.combo-box > .list-cell {
+    -fx-text-fill: #333333;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 6;
+}
+
+.combo-box .list-view {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1;
+}
+
+/* Elementy wewnątrz rozwijanej listy */
+.combo-box .list-view .list-cell {
+    -fx-text-fill: #333333;
+    -fx-background-color: #ffffff;
+    -fx-padding: 6 12 6 12;
+}
+
+/* Najechanie myszką na element na liście */
+.combo-box .list-view .list-cell:hover {
+    -fx-background-color: #f1f5f9;
+    -fx-text-fill: #799fe2;
+}
+
+/* Zaznaczony element na liście */
+.combo-box .list-view .list-cell:selected {
+    -fx-background-color: #799fe2;
+    -fx-text-fill: white;
+}
+
+.check-box .box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.check-box:hover .box {
+    -fx-border-color: #799fe2;
+    -fx-cursor: hand;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #799fe2;
+    -fx-border-color: #799fe2;
+}
+
+.check-box .mark {
+    -fx-background-color: white;
+    -fx-shape: "M0,5 L3,8 L10,1 L8,0 L3,5 L1,3 Z";
+}
+
+.check-box .label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-padding: 0 0 0 8px;
 }
