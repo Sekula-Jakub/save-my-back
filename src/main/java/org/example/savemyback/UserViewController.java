@@ -10,6 +10,7 @@ import java.io.IOException;
 
 public class UserViewController {
 
+    private User user;
     private String userName;
     private int minutes;
 
@@ -49,6 +50,12 @@ public class UserViewController {
                         stop();
                         countingLabel.setText("Time for a walk!");
                         not.displayNotification("Czas na rozciąganie!", "Hej " + userName + ", wstań i zadbaj o swoje plecy!");
+                        try {
+                            App.loadTimeUpView(user);
+                        } catch (IOException e) {
+                            System.out.println(e.getMessage());
+                            e.printStackTrace();
+                        }
                     }
                 }
             }
@@ -57,9 +64,10 @@ public class UserViewController {
         timer.start();
     }
 
-    public void loadUserData(String userName, int minutes) {
-        this.userName = userName;
-        this.minutes = minutes;
+    public void loadUserData(User user) {
+        this.user = user;
+        this.userName = user.getName();
+        this.minutes = user.getTimePeriod().getMinutes();
         //this.timeSeconds = this.minutes * 60 + 1;
 
         userNameLabel.setText(userName);

@@ -1,7 +1,6 @@
 package org.example.savemyback;
 
 import java.awt.*;
-import java.awt.TrayIcon.MessageType;
 import java.net.URL;
 
 public class Notification {

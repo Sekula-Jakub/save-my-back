@@ -7,4 +7,4 @@ Technology behind the project: **Java**, **JavaFX**, **JUnit**.
 
 ![Tekst alternatywny](src/main/resources/org/example/savemyback/readmeScreens/screen2.png)
 
-![Tekst alternatywny](src/main/resources/org/example/savemyback/readmeScreens/screen1.png)
+![Tekst alternatywny](src/main/resources/org/example/savemyback/readmeScreens/screen5.png)

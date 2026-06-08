@@ -1,6 +1,7 @@
 package org.example.savemyback;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -42,34 +43,39 @@ public class App extends Application {
                 }
             }
             Platform.exit();
+            System.exit(0);
         });
 
         stage.show();
     }
 
     protected static void loadFirstHelloView() throws IOException {
-        fxmlLoader = new FXMLLoader(App.class.getResource("hello-view.fxml"));
-        scene = new Scene(fxmlLoader.load(), 640, 480);
-        mainStage.setScene(scene);
+        loadFXML("hello-view.fxml");
     }
 
     protected static void loadSecondHelloView() throws IOException {
-        fxmlLoader = new FXMLLoader(App.class.getResource("first_info.fxml"));
-        scene = new Scene(fxmlLoader.load(), 640, 480);
-        mainStage.setScene(scene);
+        loadFXML("first_info.fxml");
     }
 
     protected static void loadFormView() throws IOException {
-        fxmlLoader = new FXMLLoader(App.class.getResource("form-view.fxml"));
-        scene = new Scene(fxmlLoader.load(), 640, 480);
-        mainStage.setScene(scene);
+        loadFXML("form-view.fxml");
     }
 
     protected static void loadUserView(User user) throws IOException {
-        fxmlLoader = new FXMLLoader(App.class.getResource("userView.fxml"));
-        scene = new Scene(fxmlLoader.load(), 640, 480);
+        loadFXML("userView.fxml");
         UserViewController userViewController = fxmlLoader.getController();
-        userViewController.loadUserData(user.getName(), user.getTimePeriod().getMinutes());
+        userViewController.loadUserData(user);
+    }
+
+    protected static void loadTimeUpView(User user) throws IOException {
+        loadFXML("timeUp-view.fxml");
+        TimeUpController timeUpController = fxmlLoader.getController();
+        timeUpController.loadUserData(user);
+    }
+
+    private static void loadFXML(String source) throws IOException {
+        fxmlLoader = new FXMLLoader(App.class.getResource(source));
+        scene = new Scene(fxmlLoader.load(), 640, 480);
         mainStage.setScene(scene);
     }
 }
