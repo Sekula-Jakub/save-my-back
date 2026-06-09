@@ -36,7 +36,7 @@
                   </Label>
                </children>
             </HBox>
-            <Label prefHeight="106.0" prefWidth="382.0" text="I think it’s about time for You to stand up&#10;and go for a short walk.&#10;We suggest about 2 - 5 minutes.">
+            <Label fx:id="messageLabel" minWidth="-Infinity" prefHeight="106.0" text="I think it’s about time for You to stand up&#10;and go for a short walk.&#10;We suggest about 2 - 5 minutes.">
                <font>
                   <Font size="20.0" />
                </font>

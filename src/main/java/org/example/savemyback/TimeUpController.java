@@ -14,6 +14,9 @@ public class TimeUpController {
     private Label userNameLabel;
 
     @FXML
+    private Label messageLabel;
+
+    @FXML
     private void handleImDoneButton(ActionEvent event) throws IOException {
         App.loadUserView(user);
     }
@@ -22,6 +25,14 @@ public class TimeUpController {
         this.user = user;
         this.userName = user.getName();
         userNameLabel.setText(userName);
+
+        App.addToMinutesPassed(user.getTimePeriod().getMinutes());
+        int currMinPass = App.getMinutesPassed();
+        setMessage(currMinPass);
+    }
+
+    public void setMessage(int minutes) {
+        messageLabel.setText(MessagesLoader.getCorrespondingMessge(minutes));
     }
 
 }

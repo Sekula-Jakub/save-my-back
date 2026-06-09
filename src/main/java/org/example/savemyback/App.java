@@ -14,6 +14,7 @@ public class App extends Application {
     private static Scene scene;
     private static FXMLLoader fxmlLoader;
     private static Stage mainStage;
+    private static int minutesPassed = 0;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -85,5 +86,13 @@ public class App extends Application {
         mainStage.show();
         mainStage.toFront();
         mainStage.requestFocus();
+    }
+
+    public static void addToMinutesPassed(int minutes) {
+        minutesPassed += minutes;
+    }
+
+    public static int getMinutesPassed() {
+        return minutesPassed;
     }
 }

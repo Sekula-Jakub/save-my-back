@@ -14,7 +14,7 @@ public class UserViewController {
     private String userName;
     private int minutes;
 
-    private int timeSeconds = 10;
+    private int timeSeconds;
     private long lastUpdate = 0;
 
     private final Notification not = new Notification();
@@ -33,8 +33,17 @@ public class UserViewController {
         App.loadFormView();
     }
 
-    @FXML
-    public void initialize() {
+    public void loadUserData(User user) {
+        this.user = user;
+        this.userName = user.getName();
+        this.minutes = user.getTimePeriod().getMinutes();
+        this.timeSeconds = this.minutes * 60 + 1;
+        //this.timeSeconds = 10;
+
+        userNameLabel.setText(userName);
+        String minutesAsString = Integer.toString(minutes);
+        timePeriodLabel.setText(minutesAsString);
+
         updateLabel();
 
         AnimationTimer timer = new AnimationTimer() {
@@ -63,17 +72,6 @@ public class UserViewController {
         };
 
         timer.start();
-    }
-
-    public void loadUserData(User user) {
-        this.user = user;
-        this.userName = user.getName();
-        this.minutes = user.getTimePeriod().getMinutes();
-        this.timeSeconds = this.minutes * 60 + 1;
-
-        userNameLabel.setText(userName);
-        String minutesAsString = Integer.toString(minutes);
-        timePeriodLabel.setText(minutesAsString);
     }
 
     private void updateLabel() {

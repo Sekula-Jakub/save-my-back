@@ -14,3 +14,10 @@
 
 
 ![Tekst alternatywny](src/main/resources/org/example/savemyback/readmeScreens/screen7.png)
+
+<table>
+  <tr>
+    <td><img src="src/main/resources/org/example/savemyback/readmeScreens/screen1.png" width="400"/></td>
+    <td><img src="src/main/resources/org/example/savemyback/readmeScreens/screen2.png" width="400"/></td>
+  </tr>
+</table>
