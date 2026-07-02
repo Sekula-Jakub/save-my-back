@@ -1,4 +1,4 @@
-package org.example.savemyback;
+package org.example.savemyback.app;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,6 +6,10 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.application.Platform;
+import org.example.savemyback.model.User;
+import org.example.savemyback.model.UserDataSetter;
+import org.example.savemyback.controller.TimeUpController;
+import org.example.savemyback.controller.UserViewController;
 
 import java.io.IOException;
 
@@ -29,7 +33,7 @@ public class App extends Application {
             loadFirstHelloView();
         }
 
-        stage.getIcons().add(new Image(App.class.getResourceAsStream("assets/icon2.png")));
+        stage.getIcons().add(new Image(App.class.getResourceAsStream("/org/example/savemyback/assets/icon2.png")));
 
         stage.setTitle("Save My Back");
         stage.setScene(scene);
@@ -53,28 +57,28 @@ public class App extends Application {
         loadFXML("hello-view.fxml");
     }
 
-    protected static void loadSecondHelloView() throws IOException {
+    public static void loadSecondHelloView() throws IOException {
         loadFXML("first_info.fxml");
     }
 
-    protected static void loadFormView() throws IOException {
+    public static void loadFormView() throws IOException {
         loadFXML("form-view.fxml");
     }
 
-    protected static void loadUserView(User user) throws IOException {
+    public static void loadUserView(User user) throws IOException {
         loadFXML("userView.fxml");
         UserViewController userViewController = fxmlLoader.getController();
         userViewController.loadUserData(user);
     }
 
-    protected static void loadTimeUpView(User user) throws IOException {
+    public static void loadTimeUpView(User user) throws IOException {
         loadFXML("timeUp-view.fxml");
         TimeUpController timeUpController = fxmlLoader.getController();
         timeUpController.loadUserData(user);
     }
 
     private static void loadFXML(String source) throws IOException {
-        fxmlLoader = new FXMLLoader(App.class.getResource(source));
+        fxmlLoader = new FXMLLoader(App.class.getResource("/org/example/savemyback/" + source));
         scene = new Scene(fxmlLoader.load(), 640, 480);
         mainStage.setScene(scene);
     }

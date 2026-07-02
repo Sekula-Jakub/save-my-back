@@ -1,4 +1,4 @@
-package org.example.savemyback;
+package org.example.savemyback.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,6 +6,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import org.example.savemyback.app.App;
+import org.example.savemyback.notification.TimePeriods;
+import org.example.savemyback.model.User;
+import org.example.savemyback.model.UserDataSetter;
 
 import java.io.IOException;
 

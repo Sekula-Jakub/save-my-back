@@ -1,4 +1,6 @@
-package org.example.savemyback;
+package org.example.savemyback.model;
+
+import org.example.savemyback.notification.TimePeriods;
 
 import java.io.Serializable;
 import java.util.Objects;

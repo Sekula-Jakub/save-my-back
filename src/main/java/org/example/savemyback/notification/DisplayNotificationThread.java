@@ -1,4 +1,4 @@
-package org.example.savemyback;
+package org.example.savemyback.notification;
 
 import java.awt.*;
 

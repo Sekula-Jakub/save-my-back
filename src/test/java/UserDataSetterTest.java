@@ -1,6 +1,6 @@
-import org.example.savemyback.TimePeriods;
-import org.example.savemyback.User;
-import org.example.savemyback.UserDataSetter;
+import org.example.savemyback.notification.TimePeriods;
+import org.example.savemyback.model.User;
+import org.example.savemyback.model.UserDataSetter;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

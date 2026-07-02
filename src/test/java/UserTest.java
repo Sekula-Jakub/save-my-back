@@ -1,5 +1,5 @@
-import org.example.savemyback.TimePeriods;
-import org.example.savemyback.User;
+import org.example.savemyback.notification.TimePeriods;
+import org.example.savemyback.model.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

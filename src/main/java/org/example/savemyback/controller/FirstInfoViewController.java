@@ -1,8 +1,9 @@
-package org.example.savemyback;
+package org.example.savemyback.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import org.example.savemyback.app.App;
 
 import java.io.IOException;
 

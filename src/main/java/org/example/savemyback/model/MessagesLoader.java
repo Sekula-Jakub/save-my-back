@@ -1,4 +1,4 @@
-package org.example.savemyback;
+package org.example.savemyback.model;
 
 import java.util.ArrayList;
 import java.util.TreeMap;

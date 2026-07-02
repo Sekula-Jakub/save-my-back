@@ -1,4 +1,4 @@
-package org.example.savemyback;
+package org.example.savemyback.model;
 
 import java.io.*;
 import java.nio.file.Files;

@@ -1,11 +1,13 @@
-package org.example.savemyback;
+package org.example.savemyback.controller;
 
 import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import org.example.savemyback.app.App;
+import org.example.savemyback.notification.Notification;
+import org.example.savemyback.model.User;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class UserViewController {

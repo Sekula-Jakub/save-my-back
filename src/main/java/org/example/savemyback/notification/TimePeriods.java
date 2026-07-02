@@ -1,4 +1,4 @@
-package org.example.savemyback;
+package org.example.savemyback.notification;
 
 public enum TimePeriods {
     MINUTES30(30),

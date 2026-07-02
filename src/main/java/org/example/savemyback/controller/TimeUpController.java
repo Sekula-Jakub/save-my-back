@@ -1,8 +1,11 @@
-package org.example.savemyback;
+package org.example.savemyback.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import org.example.savemyback.app.App;
+import org.example.savemyback.model.MessagesLoader;
+import org.example.savemyback.model.User;
 
 import java.io.IOException;
 

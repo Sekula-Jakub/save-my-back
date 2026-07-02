@@ -1,4 +1,6 @@
-package org.example.savemyback;
+package org.example.savemyback.notification;
+
+import org.example.savemyback.app.App;
 
 import java.awt.*;
 import java.net.URL;
