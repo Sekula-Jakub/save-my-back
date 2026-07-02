@@ -21,3 +21,13 @@
     <td><img src="src/main/resources/org/example/savemyback/readmeScreens/screen2.png" width="400"/></td>
   </tr>
 </table>
+
+### Continuous Integration (CI)
+
+The project uses **Java CI with Maven** powered by GitHub Actions.
+Every push to the master branch automatically triggers:
+* project compilation,
+* execution of all JUnit tests,
+* validation of the build process.
+
+This ensures that the application is continuously tested and remains stable as new features and improvements are introduced.
