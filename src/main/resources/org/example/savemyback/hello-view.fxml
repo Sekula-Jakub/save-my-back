@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="600.0" style="-fx-background-color: #ffe699;" stylesheets="@cssFiles/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.savemyback.HelloViewController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="600.0" style="-fx-background-color: #ffe699;" stylesheets="@cssFiles/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.savemyback.HelloViewController">
    <children>
       <VBox alignment="CENTER" prefHeight="388.0" prefWidth="600.0">
          <children>
-            <Label prefHeight="86.0" prefWidth="93.0" text="Hello!">
+            <Label prefHeight="86.0" text="Hello!">
                <font>
                   <Font name="Calibri Bold" size="37.0" />
                </font>
             </Label>
-            <Label prefHeight="63.0" prefWidth="326.0" text="It's Your first step to take care of your&#10;back while working on a computer! ">
+            <Label prefHeight="63.0" text="It's Your first step to take care of your&#10;back while working on a computer! ">
                <font>
                   <Font name="Calibri" size="21.0" />
                </font>
